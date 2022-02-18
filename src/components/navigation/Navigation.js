@@ -1,15 +1,64 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import {Navbar, Container, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap';
+import { IoCartOutline } from "react-icons/io5";
+import './navigation.css'
+
 
 export const Navigation = () => {
+
   return (
-    <div>
-      <h1>Home</h1>
-      <nav>
-        <Link to="/">Home</Link> |{" "}
-        <Link to="about">About</Link>
-      </nav>
-    </div>
+    <>
+          <Navbar bg="light" expand="lg">
+            <Container fluid>
+              <Navbar.Brand to="/"as={Link} >
+                  <img
+                  src="img/Logo.jpg"
+                  width="150"
+                  height="150"
+                  className="d-inline-block align-top"
+                  alt="React Bootstrap logo"
+                />
+              </Navbar.Brand>
+              <Navbar.Toggle aria-controls="navbarScroll" />
+              <Navbar.Collapse id="navbarScroll">
+                <Nav
+                  className="me-auto my-3 my-lg-0"
+                  style={{ maxHeight: '100px' }}
+                  navbarScroll
+                >
+                 <Nav.Link to="/" as={Link}>Home</Nav.Link> 
+                  
+                  <NavDropdown title="categories" id="navbarScrollingDropdown">
+                    <NavDropdown.Item href="#action3">Luces</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">Audio y video</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">Limpieza</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">Timones</NavDropdown.Item>
+                    <NavDropdown.Item href="#action4">Retrovisores</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item to="/products" as={Link}>
+                      Todos los productos
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <Form className="d-flex FormCont">
+                    <FormControl
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                      style={{borderRadius: '50px', width:'350px'}}
+                    />
+                    <Button style={{borderRadius: '50px', width:'80px'}} variant="danger">Search</Button>
+                </Form>
+                </Nav>
+                <Nav className="carrito-cont">
+                    <div className="carrito-name">Carrito</div>
+                    <IoCartOutline size="2rem"/>
+                </Nav>
+              </Navbar.Collapse>
+            </Container>
+          </Navbar>
+
+    </>
   )
 }
 
