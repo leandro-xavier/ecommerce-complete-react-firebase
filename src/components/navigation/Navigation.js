@@ -9,7 +9,7 @@ export const Navigation = () => {
 
   return (
     <>
-          <Navbar bg="light" expand="lg">
+          <Navbar  expand="lg">
             <Container fluid>
               <Navbar.Brand to="/"as={Link} >
                   <img
@@ -35,20 +35,12 @@ export const Navigation = () => {
                     <NavDropdown.Item href="#action4">Limpieza</NavDropdown.Item>
                     <NavDropdown.Item href="#action4">Timones</NavDropdown.Item>
                     <NavDropdown.Item href="#action4">Retrovisores</NavDropdown.Item>
+                    <NavDropdown.Item to="/categories/accessories" as={Link}>Accessories</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item to="/products" as={Link}>
                       Todos los productos
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Form className="d-flex FormCont">
-                    <FormControl
-                      type="search"
-                      placeholder="Search"
-                      aria-label="Search"
-                      style={{borderRadius: '50px', width:'350px'}}
-                    />
-                    <Button style={{borderRadius: '50px', width:'80px'}} variant="danger">Search</Button>
-                </Form>
                 </Nav>
                 <Nav className="carrito-cont">
                     <div className="carrito-name">Carrito</div>

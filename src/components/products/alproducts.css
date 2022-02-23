@@ -1,7 +1,9 @@
-.Allproduct-container {
-    border: 1px solid black;
+.FormCont {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-.allproduct-filter-container {
-    border: 1px solid black;
+.h4 {
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
