@@ -30,12 +30,13 @@ export const Navigation = () => {
                  <Nav.Link to="/" as={Link}>Home</Nav.Link> 
                   
                   <NavDropdown title="categories" id="navbarScrollingDropdown">
-                    <NavDropdown.Item href="#action3">Luces</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">Audio y video</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">Limpieza</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">Timones</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">Retrovisores</NavDropdown.Item>
+                    <NavDropdown.Item to="/categories/lights" as={Link}>Luces</NavDropdown.Item>
+                    <NavDropdown.Item to="/categories/audio" as={Link}>Audio y video</NavDropdown.Item>
+                    <NavDropdown.Item to="/categories/cleaning" as={Link}>Limpieza</NavDropdown.Item>
+                    <NavDropdown.Item to="/categories/retrovisores" as={Link}>Retrovisores</NavDropdown.Item>
+                    <NavDropdown.Item to="/categories/protection" as={Link}>Proteccion</NavDropdown.Item>
                     <NavDropdown.Item to="/categories/accessories" as={Link}>Accessories</NavDropdown.Item>
+                    <NavDropdown.Item to="/categories/tires" as={Link}>Llantas</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item to="/products" as={Link}>
                       Todos los productos

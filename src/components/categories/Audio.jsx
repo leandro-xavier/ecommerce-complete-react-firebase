@@ -4,7 +4,7 @@ import { db } from '../../config/firebase';
 import {Card, Button, Dropdown, Container, Col, Row} from 'react-bootstrap';
 import './accessories.css'
 
-export const Tires = () => {
+export const Audio = () => {
 
   const [item, SetItem] = useState([]);
 
@@ -15,7 +15,7 @@ export const Tires = () => {
   const productFunc = async () => {
     const productRef = collection(db, "products")
 
-    const q = query(productRef, where("categories", "array-contains", "llantas"));
+    const q = query(productRef, where("categories", "array-contains", "audio y video"));
   
     const productAccessories = await getDocs(q)
     let is = []
@@ -43,7 +43,7 @@ export const Tires = () => {
       <div className='header-categories'>
         <Container>
           <Row>
-            <Col><h2 className='h2'>Categoria De Llantas</h2></Col>
+            <Col><h2 className='h2'>Categoria De Audio y videos</h2></Col>
             <Col>
               <Dropdown className='drop'>
                   <Dropdown.Toggle id="dropdown-button-dark-example1" variant="danger">
@@ -76,3 +76,4 @@ export const Tires = () => {
 </>
   )
 }
+
